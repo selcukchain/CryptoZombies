@@ -5,13 +5,13 @@ Bu bölümde function return values(fonksiyon dönüş değerleri) ve function m
 **Return Values(dönüş değerleri)**
 
 >Bir fonksiyonlarda bir değer(value) döndürmek için bildirim şu şekilde görünür:
+```
+string greeting = "What's up dog";
 
-    string greeting = "What's up dog";
-
-    function sayHello() public returns (string memory) {
-    return greeting;
-    }
-
+function sayHello() public returns (string memory) {
+  return greeting;
+}
+```
 Solidity’de fonksiyon bildirimi, dönüş değeri türünü içerir(örneğimizde bu bir string)
 
 **Function modifiers (fonksiyon değiştiriciler)**
@@ -48,28 +48,31 @@ Bu fonksiyon, uygulamanın durumundan bile okumaz – dönüş değeri(return va
 
 **Funtion body bu noktada boş olmalıdır daha sonra doldurulacaktır.**
 
- 	pragma solidity >=0.5.0 <0.6.0;
+```
+pragma solidity >=0.5.0 <0.6.0;
 
-    contract ZombieFactory {
+contract ZombieFactory {
 
-       uint dnaDigits = 16;
-       uint dnaModulus = 10 ** dnaDigits;
+    uint dnaDigits = 16;
+    uint dnaModulus = 10 ** dnaDigits;
 
-        struct Zombie {
-          string name;
-          uint dna;
-       }
+    struct Zombie {
+        string name;
+        uint dna;
+    }
 
-      Zombie[] public zombies;
+    Zombie[] public zombies;
 
-      function _createZombie(string memory _name, uint _dna) private {
-         zombies.push(Zombie(_name, _dna));
-       }
+    function _createZombie(string memory _name, uint _dna) private {
+        zombies.push(Zombie(_name, _dna));
+    }
 
      //private olarak saklanan generateRandomDna memory_str string verisini uint olarak çevirme 
-     function _generateRandomDna(string memory_str) private view returns (uint){
+   function _generateRandomDna(string memory_str) private view returns (uint){
    
-      }
+   }
    
 
-      }
+}
+
+```
