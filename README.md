@@ -7,3 +7,4 @@ Her bölüm, akıllı sözleşmeler oluşturmak ve optimize etmek için Solidity
 
 Tüm dersleri tamamladıktan sonra, blok zincirinde gerçekleşen ilk çevrimiçi çatışmalardan birinde diğer oyuncuların zombilerine karşı savaşmak mümkündür.
 
+![image](https://user-images.githubusercontent.com/46134011/163584414-d23cf73d-3e80-4507-9e41-0e90ff43b743.png)
