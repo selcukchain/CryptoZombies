@@ -21,52 +21,55 @@ Yukarıdaki işlev aslında Solidity'deki durumu değiştirmez kısaca herhangi 
 
 Bu durumda, onu bir view function olarak ilan edebiliriz, yani yalnızca verileri görüntüleyebiliyor, onları değiştirmiyor:
 
-function sayHello() public view returns (string memory) { 
-}
+    function sayHello() public view returns (string memory) { 
+    }
 
-Solidity ayrıca pure functions içerir, yani uygulamadaki hiçbir veriye bile erişmezsiniz. Örenğin:
 
-function _multiply(uint a, uint b) private pure returns (uint) {
-  return a * b;
-}
+Solidity ayrıca pure functions(saf fonksiyon) içerir, yani uygulamadaki hiçbir veriye bile erişmezsiniz. 
 
-Bu function, uygulamanın durumundan bile okumaz – return value yalnızca function parametrelerine bağlıdır. Yani bu durumda işlevi pure olarak ilan edeceğiz.
+>Örenğin:
 
-Not: İşlevlerin ne zaman pure/view olarak işaretleneceğini hatırlamak zor olabilir. Neyse ki Solidity derleyicisi, bu değiştiricilerden birini ne zaman kullanmanız gerektiğini size bildirmek için uyarılar verme konusunda iyidir.
+    function _multiply(uint a, uint b) private pure returns (uint) {
+    return a * b;
+    }
 
-Gelelim zombilerimize
- Bizden istenen bir string olarak rastgele DNA numarası üreten helper function üretmek.
+Bu fonksiyon, uygulamanın durumundan bile okumaz – dönüş değeri(return value) yalnızca fonksiyon parametrelerine bağlıdır. Yani bu durumda işlevi pure olarak ilan edeceğiz.
 
-_generateRandomDna adlı private bir funtion oluşturun. _str (string) adlı bir parametre alacak ve bir uint döndürecektir. _str parametresinin data lokasyonunu hafızaya almayı unutmayınız.
+**Not: İşlevlerin ne zaman pure/view olarak işaretleneceğini hatırlamak zor olabilir. Neyse ki Solidity derleyicisi, bu değiştiricilerden birini ne zaman kullanmanız gerektiğini size bildirmek için uyarılar verme konusunda iyidir.**
 
-Bu işlev,kontratımızın variables’larından bazılarını görüntüleyecek ancak bunları değiştirmeyecektir, bu nedenle onu view olarak işaretleyin.
+**Uygulama**
 
-Funtion body bu noktada boş olmalıdır daha sonra doldurulacaktır.
+
+ Bizden istenen bir string olarak rastgele DNA numarası üreten yardımcı fonksiyon (helper function) üretmek.
+
+> _generateRandomDna adlı private bir funtion oluşturun. _str (string) adlı bir parametre alacak ve bir uint döndürecektir. _str parametresinin data lokasyonunu hafızaya almayı unutmayınız.
+
+>Bu işlev,kontratımızın variables’larından bazılarını görüntüleyecek ancak bunları değiştirmeyecektir, bu nedenle onu view olarak işaretleyin.
+
+**Funtion body bu noktada boş olmalıdır daha sonra doldurulacaktır.**
 
  	pragma solidity >=0.5.0 <0.6.0;
 
-contract ZombieFactory {
+    contract ZombieFactory {
 
-    uint dnaDigits = 16;
-    uint dnaModulus = 10 ** dnaDigits;
+       uint dnaDigits = 16;
+       uint dnaModulus = 10 ** dnaDigits;
 
-    struct Zombie {
-        string name;
-        uint dna;
-    }
+        struct Zombie {
+          string name;
+          uint dna;
+       }
 
-    Zombie[] public zombies;
+      Zombie[] public zombies;
 
-    function _createZombie(string memory _name, uint _dna) private {
-        zombies.push(Zombie(_name, _dna));
-    }
+      function _createZombie(string memory _name, uint _dna) private {
+         zombies.push(Zombie(_name, _dna));
+       }
 
      //private olarak saklanan generateRandomDna memory_str string verisini uint olarak çevirme 
-   function _generateRandomDna(string memory_str) private view returns (uint){
+     function _generateRandomDna(string memory_str) private view returns (uint){
    
-   }
+      }
    
 
-}
-
-
+      }
