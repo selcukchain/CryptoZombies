@@ -1,0 +1,33 @@
+Chapter 5: Structs(Yapılar)
+
+Birden çok özelliğe sahip daha karmaşık veri türleri yazımına ihtiyaç duyulur ve solidty de karmaşık veri türleri oluştumamız için devreye Struct’lar girer.
+
+    struct Person {
+      uint age;
+      string name;
+     }
+
+Burada yeni bir type,string belittiğimizi unutmayalım.Stringler rastgele uzunlutaki UTF-8 verileri için kullanılır.
+
+>Örneğin
+
+    tring greeting = "Hello world!"
+
+
+**Uygulama**
+
+Ordumuz için bazı zombiler yaratmak isteyeceğiz ve zombilerin birden fazla özelliği olacaktır.bu nedenle burada Zombie struct olarak name (a string) ve dna (a uint) oluşturmamız istenmektedir.
+
+	pragma solidity >=0.5.0 <0.6.0;
+	
+	contract ZombieFactory {
+	
+	    uint dnaDigits = 16;
+	    uint dnaModulus = 10 ** dnaDigits;
+	    	    // Zombi struct yapısı
+     struct Zombie {
+
+         string name;
+         uint dna;
+	        }
+
