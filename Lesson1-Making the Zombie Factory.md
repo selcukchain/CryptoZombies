@@ -7,9 +7,11 @@ Toplam 15 bölümden oluşmaktadır.
 Amaçlar;
 
 •	Fabrikamız, ordumuzdaki tüm zombilerin bir veritabanını tutacaktır.
+
 •	Fabrikamız yeni zombiler yaratma işlevine sahip olacak.
+
 •	Her zombi rastgele ve benzersiz bir görünüme sahip olacak
 
 Daha sonraki derslerde, zombilere insanlara veya diğer zombilere saldırma yeteneği vermek gibi daha fazla işlevsellik ekleyeceğiz öncelikle, yeni zombiler yaratmanın temel işlevlerini eklemeliyiz.
 
-
+ ![image](https://user-images.githubusercontent.com/46134011/163584833-fb82410d-5904-4aa0-a967-1e07efafc033.png)
