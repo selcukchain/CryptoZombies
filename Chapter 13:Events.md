@@ -53,7 +53,7 @@ Sıra geldi Zombilerimize,Uygulamanın bunu gösterebilmesi için her yeni zombi
        // zombies.push(Zombie(_name, _dna)) -1 ile az önceki zombienin indeksini koruduk.
       uint id= zombies.push(Zombie(_name, _dna))-1 ;
         
-        //bunu anlatamadım!!!!!!1 
+        //NewZombie(id,_name,_dna) emit ile event tetiklendi
         emit NewZombie(id, _name, _dna);
     }
 
