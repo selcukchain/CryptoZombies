@@ -35,7 +35,7 @@ Diğer kontratlar daha sonra bu diziden okuyabilir, ancak yazamaz. Dolayısıyla
 
 **Uygulama**
 
-Gelelim uygulamamıza, bir zombi ordusu depolamak isteyeceğiz. Ve tüm zombilerimizi diğer uygulamalara göstermek isteyeceğiz, bu yüzden herkese açık olmasını istiyoruz.
+Gelelim uygulamamıza, bir zombi ordusu depolamak isteyeceğiz. Ve tüm zombilerimizi diğer uygulamalara göstermek isteyeceğiz, bu yüzden herkese açık(public) olmasını istiyoruz.
 
 >Herkese açık bir Zombie array  oluşturmamızı ve buna zombies adını vermemiz isteniliyor.
 
